@@ -23,17 +23,15 @@ class FullTimeEmployee(Employee):
         self.first_day = first_vacation_day
         self.number_of_days = number_of_days
 
-        print(f'Начало неоплачиваемого отпуска: {self.first_day}, продолжительность: {self.number_of_days} дней.')
+        return f'Начало неоплачиваемого отпуска: {self.first_day}, продолжительность: {self.number_of_days} дней.'
 
 
 class PartTimeEmployee(Employee):
 
     vacation_days = 14
-    
+
     def __init__(self, first_name, second_name, gender):
         super().__init__(first_name, second_name, gender)
-        
-    
 
 
 # Расширьте класс Employee, создав классы FullTimeEmployee и PartTimeEmployee.
