@@ -68,7 +68,13 @@ class OfficeEmployee(Employee):
 
 
 # Пример использования:
-office_employee = OfficeEmployee(first_name='Иван', last_name='Иванов', gender='м', worker_class=2, salary=45000)
+office_employee = OfficeEmployee(
+    first_name='Иван',
+    last_name='Иванов',
+    gender='м',
+    worker_class=2,
+    salary=45000
+)
 
 vacation_days = 10
 
@@ -80,7 +86,7 @@ print(f'У сотрудника осталось {remaining_days} дн. отпу
 vacation_payment = office_employee.get_vacation_payment(vacation_days)
 print(f'За {vacation_days} дн. отпуска сотрудник получит {vacation_payment} руб.')
 
-#full_time_employee = FullTimeEmployee('Роберт', 'Крузо', 'м')
-#print(full_time_employee.get_unpaid_vacation('2023-07-01', 5))
-#part_time_employee = PartTimeEmployee('Алёна', 'Пятницкая', 'ж')
-#print(part_time_employee.get_vacation_details())
+full_time_employee = FullTimeEmployee('Роберт', 'Крузо', 'м')
+print(full_time_employee.get_unpaid_vacation('2023-07-01', 5))
+part_time_employee = PartTimeEmployee('Алёна', 'Пятницкая', 'ж')
+print(part_time_employee.get_vacation_details())
